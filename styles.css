@@ -50,32 +50,6 @@ nav {
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  align-items: center;
-}
-
-.lang-switch {
-  display: flex;
-  gap: 0.25rem;
-  margin-left: 0.5rem;
-  padding-left: 1rem;
-  border-left: 1px solid var(--border);
-}
-
-.lang-switch a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-size: 0.85rem;
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-}
-
-.lang-switch a:hover {
-  color: var(--primary);
-}
-
-.lang-switch a.active {
-  background: var(--primary);
-  color: #fff;
 }
 
 .nav-links a {
