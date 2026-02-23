@@ -71,11 +71,13 @@
 
     <section class="screenshots">
       <h2>Screenshots</h2>
+      <!-- 🔧 Add your screenshot images. Replace placeholder with actual paths -->
       <div class="screenshot-grid">
-        <img src="screenshots/screenshot1.png" alt="YT Repeater Pro - Core features overview">
-        <img src="screenshots/screenshot2.png" alt="YT Repeater Pro - Pro unlock features">
-        <img src="screenshots/screenshot3.png" alt="YT Repeater Pro - Feature comparison and pricing">
+        <img src="screenshots/screenshot1.png" alt="YT Repeater Pro - Main interface">
+        <img src="screenshots/screenshot2.png" alt="YT Repeater Pro - Repeat settings">
+        <img src="screenshots/screenshot3.png" alt="YT Repeater Pro - In action">
       </div>
+      <p class="screenshot-note">Add 3-5 screenshots in the <code>website/screenshots/</code> folder and update the src paths above.</p>
     </section>
 
     <section class="purchase">
@@ -95,5 +97,28 @@
     </div>
     <p>&copy; 2026 YT Repeater Pro. All rights reserved.</p>
   </footer>
+  <div class="lightbox-overlay" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="">
+  </div>
+  <script>
+    (function() {
+      var overlay = document.getElementById('lightbox');
+      var lbImg = overlay.querySelector('img');
+      document.querySelectorAll('.screenshot-grid img').forEach(function(img) {
+        img.addEventListener('click', function() {
+          lbImg.src = this.src;
+          lbImg.alt = this.alt;
+          overlay.classList.add('active');
+        });
+      });
+      overlay.addEventListener('click', function(e) {
+        if (e.target !== lbImg) overlay.classList.remove('active');
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') overlay.classList.remove('active');
+      });
+    })();
+  </script>
 </body>
 </html>
