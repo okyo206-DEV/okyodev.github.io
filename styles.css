@@ -90,20 +90,45 @@ main {
   margin-right: auto;
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .cta-button {
   display: inline-block;
-  background: var(--primary);
-  color: white !important;
   padding: 0.875rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
-.cta-button:hover {
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+.cta-button.primary {
+  background: var(--primary);
+  color: white !important;
+}
+
+.cta-button.primary:hover {
   background: var(--primary-dark);
+}
+
+.cta-button.secondary {
+  background: #fff;
+  color: var(--primary) !important;
+  border: 2px solid var(--primary);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary);
+  color: #fff !important;
 }
 
 /* Sections */
